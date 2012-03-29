@@ -8,10 +8,12 @@ lflags=kernel32.lib user32.lib wsock32.lib winmm.lib /nologo /subsystem:console 
 all: aa.exe
 
 hellohack.obj: hellohack.c
-	$(cc) $(cflags) hellohack.c
+	$(cc) $(cflags) hellohack.c 
 
+getopt.obj: getopt/getopt.c
+	$(cc) $(cflags) getopt/getopt.c
 
-aa.exe: hellohack.obj
+aa.exe: hellohack.obj 
 	$(link) hellohack.obj $(lflags)
     
 clean:
