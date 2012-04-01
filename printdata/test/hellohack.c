@@ -11,7 +11,7 @@ struct bs
 };
 int main()
 {
-    unsigned int iTmp = 12359;
+    unsigned int iTmp = 222;
     struct bs bsTmp;
     char str[4];
 
@@ -20,6 +20,7 @@ int main()
     printf("\n%d\n", sizeof(iTmp));
 
     PrintBinaryData((char *)(&iTmp), 4); 
+    PrintRawData((char *)(&iTmp), 4);
     printf("\n---------------------\n");
     bsTmp.a = 1;
     bsTmp.b = 4;
