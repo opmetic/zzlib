@@ -52,6 +52,10 @@ void PrintRawData (char *data, int len)
         {
             printf ("   ");
         }
+		if ((i % 16) <= 8)
+		{
+			printf (" ");
+		}
     }
 
     printf(" ");

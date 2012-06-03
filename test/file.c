@@ -63,7 +63,7 @@ int main(int argc, char **argv)
 {
     FILE *fp;
     int buffSize = 0, nFileSize = 0;
-    char buff[1024];
+    char buff[10240];
     fp = fopen(argv[1], "rb");
     printf("open file:%s\n", argv[1]);
     //fp = fopen("SimpleSection.obj", "rb");
@@ -80,7 +80,7 @@ int main(int argc, char **argv)
         printf("size:%d\n", sizeof(*fp));
         PrintRawData((char *)fp, 32);
         printf("\n-------------------------\n");
-        memset(buff, '\0', 1024);
+        memset(buff, '\0', 10240);
         fread(buff, nFileSize, 1, fp); 
         PrintRawData(buff, nFileSize);
         fclose(fp);
