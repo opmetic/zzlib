@@ -13,7 +13,7 @@ file.obj: file.c
 printdata.obj: ../printdata/printdata.c
 	$(cc) $(cflags) ../printdata/printdata.c
 
-aa.exe: file.obj printdata.obj 
+aa.exe: file.obj  printdata.obj
 	$(link) file.obj printdata.obj $(lflags)
     
 clean:
